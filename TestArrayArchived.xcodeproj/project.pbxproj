@@ -280,6 +280,7 @@
 		21B38E0C17AE432B00A4641E /* libwebsockets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B38E0B17AE432B00A4641E /* libwebsockets.a */; };
 		21B38E1217AE432B00A4641E /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21B38E1117AE432B00A4641E /* AppDelegate.cpp */; };
 		21B38E1517AE432B00A4641E /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21B38E1417AE432B00A4641E /* HelloWorldScene.cpp */; };
+		21B38E2417AE537100A4641E /* Student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21B38E2217AE537100A4641E /* Student.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -873,6 +874,9 @@
 		21B38E1117AE432B00A4641E /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
 		21B38E1317AE432B00A4641E /* HelloWorldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/HelloWorldScene.h; sourceTree = "<group>"; };
 		21B38E1417AE432B00A4641E /* HelloWorldScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldScene.cpp; path = Classes/HelloWorldScene.cpp; sourceTree = "<group>"; };
+		21B38E1B17AE443A00A4641E /* OBCording.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OBCording.h; path = Classes/OBCording.h; sourceTree = "<group>"; };
+		21B38E2217AE537100A4641E /* Student.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Student.cpp; path = Classes/Student.cpp; sourceTree = "<group>"; };
+		21B38E2317AE537100A4641E /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Student.h; path = Classes/Student.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2093,6 +2097,9 @@
 		21B38E0F17AE432B00A4641E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				21B38E2217AE537100A4641E /* Student.cpp */,
+				21B38E2317AE537100A4641E /* Student.h */,
+				21B38E1B17AE443A00A4641E /* OBCording.h */,
 				21B38E1017AE432B00A4641E /* AppDelegate.h */,
 				21B38E1117AE432B00A4641E /* AppDelegate.cpp */,
 				21B38E1317AE432B00A4641E /* HelloWorldScene.h */,
@@ -2423,6 +2430,7 @@
 				21B38E0417AE432B00A4641E /* cpVect.c in Sources */,
 				21B38E1217AE432B00A4641E /* AppDelegate.cpp in Sources */,
 				21B38E1517AE432B00A4641E /* HelloWorldScene.cpp in Sources */,
+				21B38E2417AE537100A4641E /* Student.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2564,6 +2572,7 @@
 				21B38E1A17AE432B00A4641E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

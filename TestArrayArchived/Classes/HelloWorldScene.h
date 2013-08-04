@@ -17,6 +17,15 @@ public:
 
     // preprocessor macro for "static create()" constructor ( node() deprecated )
     CREATE_FUNC(HelloWorld);
+
+private:
+    cocos2d::CCArray* initClassOne();
+    
+    void displayClasses(cocos2d::CCArray* array);
+    
+    void testArrayArchived(cocos2d::CCArray*);
+ 
+    void testArrayUnarchived();
 };
 
 #endif // __HELLOWORLD_SCENE_H__

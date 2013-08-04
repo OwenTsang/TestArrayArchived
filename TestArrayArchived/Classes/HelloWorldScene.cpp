@@ -1,5 +1,7 @@
 #include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
+#include "Student.h"
+
 
 using namespace cocos2d;
 using namespace CocosDenshion;
@@ -71,7 +73,72 @@ bool HelloWorld::init()
     // add the sprite as a child to this layer
     this->addChild(pSprite, 0);
     
+    testArrayArchived(initClassOne());
+    
+    testArrayUnarchived();
+    
     return true;
+}
+
+CCArray* HelloWorld::initClassOne()
+{
+    CCArray* classOneArray = CCArray::createWithCapacity(3);
+    
+    Student* _s = new Student();
+    _s->setId(1);
+    _s->setName("Owen1");
+    classOneArray->addObject(_s);
+    _s->release();
+    
+    _s = new Student();
+    _s->setId(2);
+    _s->setName("Owen2");
+    classOneArray->addObject(_s);
+    _s->release();
+    
+    _s = new Student();
+    _s->setId(3);
+    _s->setName("Owen3");
+    classOneArray->addObject(_s);
+    _s->release();
+    
+    return classOneArray;
+}
+
+void HelloWorld::displayClasses(CCArray* classOneArray)
+{
+    CCLog("display Class One students' detail now ~~");
+    
+    Student*_s = NULL;
+    CCObject* obj = NULL;
+    CCARRAY_FOREACH(classOneArray, obj)
+    {
+        _s = (Student*)obj;
+        CCLog("id = %d, name = %s",_s->getId(),_s->getName().c_str());
+    }
+}
+
+void HelloWorld::testArrayArchived(CCArray* classOneArray)
+{
+    CCLog("enter function testArrayArchived()~~");
+    
+    displayClasses(classOneArray);
+    
+    CCUserDefault* writer = CCUserDefault::sharedUserDefault();
+    OB_ARCHIVED_ARRAY(writer,"ClassOne",classOneArray);
+    writer->flush();
+    
+}
+
+void HelloWorld::testArrayUnarchived()
+{
+    CCLog("enter function testArrayUnarchived().....");
+    CCArray*  classOneArray = NULL;
+    
+    CCUserDefault* reader = CCUserDefault::sharedUserDefault();
+    OB_UNARCHIVED_ARRAY(classOneArray,reader,"ClassOne",Student);
+ 
+    displayClasses(classOneArray);
 }
 
 void HelloWorld::menuCloseCallback(CCObject* pSender)
